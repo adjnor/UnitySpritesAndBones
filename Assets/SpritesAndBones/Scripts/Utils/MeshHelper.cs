@@ -12,8 +12,8 @@ public static class MeshHelper {
     static List<Vector3> normals;
     static List<Color> colors;
     static List<Vector2> uv;
-    static List<Vector2> uv1;
     static List<Vector2> uv2;
+    static List<Vector2> uv3;
 
     static List<int> indices;
     static Dictionary<uint, int> newVectices;
@@ -23,8 +23,8 @@ public static class MeshHelper {
         normals = new List<Vector3>(mesh.normals);
         colors = new List<Color>(mesh.colors);
         uv = new List<Vector2>(mesh.uv);
-        uv1 = new List<Vector2>(mesh.uv2);
         uv2 = new List<Vector2>(mesh.uv2);
+        uv3 = new List<Vector2>(mesh.uv3);
         indices = new List<int>();
     }
     static void CleanUp() {
@@ -32,8 +32,8 @@ public static class MeshHelper {
         normals = null;
         colors = null;
         uv = null;
-        uv1 = null;
         uv2 = null;
+        uv3 = null;
         indices = null;
     }
 
@@ -56,10 +56,10 @@ public static class MeshHelper {
             colors.Add((colors[i1] + colors[i2]) * 0.5f);
         if (uv.Count > 0)
             uv.Add((uv[i1] + uv[i2]) * 0.5f);
-        if (uv1.Count > 0)
-            uv1.Add((uv1[i1] + uv1[i2]) * 0.5f);
         if (uv2.Count > 0)
             uv2.Add((uv2[i1] + uv2[i2]) * 0.5f);
+        if (uv3.Count > 0)
+            uv3.Add((uv3[i1] + uv3[i2]) * 0.5f);
 
         return newIndex;
     }
@@ -95,10 +95,10 @@ public static class MeshHelper {
             mesh.colors = colors.ToArray();
         if (uv.Count > 0)
             mesh.uv = uv.ToArray();
-        if (uv1.Count > 0)
-            mesh.uv2 = uv1.ToArray();
         if (uv2.Count > 0)
             mesh.uv2 = uv2.ToArray();
+        if (uv3.Count > 0)
+            mesh.uv3 = uv3.ToArray();
 
         mesh.triangles = indices.ToArray();
 
@@ -126,10 +126,10 @@ public static class MeshHelper {
             colors.Add((colors[i1] + colors[i2] + colors[i3]) / 3.0f);
         if (uv.Count > 0)
             uv.Add((uv[i1] + uv[i2] + uv[i3]) / 3.0f);
-        if (uv1.Count > 0)
-            uv1.Add((uv1[i1] + uv1[i2] + uv1[i3]) / 3.0f);
         if (uv2.Count > 0)
             uv2.Add((uv2[i1] + uv2[i2] + uv2[i3]) / 3.0f);
+        if (uv3.Count > 0)
+            uv3.Add((uv3[i1] + uv3[i2] + uv3[i3]) / 3.0f);
         return newIndex;
     }
 
@@ -176,10 +176,10 @@ public static class MeshHelper {
             mesh.colors = colors.ToArray();
         if (uv.Count > 0)
             mesh.uv = uv.ToArray();
-        if (uv1.Count > 0)
-            mesh.uv2 = uv1.ToArray();
         if (uv2.Count > 0)
             mesh.uv2 = uv2.ToArray();
+        if (uv3.Count > 0)
+            mesh.uv3 = uv3.ToArray();
 
         mesh.triangles = indices.ToArray();
 

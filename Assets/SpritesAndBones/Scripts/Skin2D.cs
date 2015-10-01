@@ -60,7 +60,7 @@ public class Skin2D : MonoBehaviour {
 					SpriteMesh spriteMesh = new SpriteMesh();
 					spriteMesh.spriteRenderer = spriteRenderer;
 					spriteMesh.CreateSpriteMesh();
-					Texture2D spriteTexture = UnityEditor.Sprites.SpriteUtility.GetSpriteTexture(spriteRenderer.sprite, false);
+                    Texture2D spriteTexture = spriteRenderer.sprite.texture;
 					Material spriteMaterial = new Material(spriteRenderer.sharedMaterial);
 					spriteMaterial.CopyPropertiesFromMaterial(spriteRenderer.sharedMaterial);
 					spriteMaterial.mainTexture = spriteTexture;

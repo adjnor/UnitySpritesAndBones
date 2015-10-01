@@ -64,7 +64,7 @@ public class SpriteMesh {
 			Mesh mesh = new Mesh();
 			mesh.vertices = vertices;
 			mesh.triangles = indices;
-			Vector2[] uvs = UnityEditor.Sprites.SpriteUtility.GetSpriteUVs(spriteRenderer.sprite, false);
+            Vector2[] uvs = spriteRenderer.sprite.uv;
 			mesh.uv = uvs;
 			mesh.RecalculateNormals();
 			mesh.RecalculateBounds();

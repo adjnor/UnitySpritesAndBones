@@ -50,14 +50,15 @@ public class SortLayerMaterialEditor : EditorWindow {
     }
 
 	static void CreateMaterial (GameObject go) {
-		// Create a simple material asset
-		if (go.GetComponent<Renderer>() != null)
+        Renderer goRenderer = go.GetComponent<Renderer>();
+        // Create a simple material asset
+        if (goRenderer != null)
 		{
-			Material material = new Material(go.GetComponent<Renderer>().sharedMaterial);
-			material.CopyPropertiesFromMaterial(go.GetComponent<Renderer>().sharedMaterial);
-			go.GetComponent<Renderer>().sharedMaterial = material;
+			Material material = new Material(goRenderer.sharedMaterial);
+			material.CopyPropertiesFromMaterial(goRenderer.sharedMaterial);
+			goRenderer.sharedMaterial = material;
 			MaterialPropertyBlock block = new MaterialPropertyBlock();
-			go.GetComponent<Renderer>().GetPropertyBlock(block);
+			goRenderer.GetPropertyBlock(block);
 			#if UNITY_EDITOR
 			if(!Directory.Exists("Assets/Materials")) {
 				AssetDatabase.CreateFolder("Assets", "Materials");
@@ -81,17 +82,19 @@ public class SortLayerMaterialEditor : EditorWindow {
         #if UNITY_EDITOR
 		if (Selection.activeGameObject != null) {
 			GameObject o = Selection.activeGameObject;
-			if (o.GetComponent<Renderer>() != null)
+            Renderer oRenderer = o.GetComponent<Renderer>();
+            if (oRenderer != null)
 			{
-				o.GetComponent<Renderer>().sortingLayerName = "Default";
-				o.GetComponent<Renderer>().sortingOrder = 0;
+				oRenderer.sortingLayerName = "Default";
+				oRenderer.sortingOrder = 0;
 			}
 			Transform[] children = o.GetComponentsInChildren<Transform>(true);
 			foreach(Transform child in children) {
-				if (child.gameObject.GetComponent<Renderer>() != null)
+                Renderer childRenderer = child.gameObject.GetComponent<Renderer>();
+                if (childRenderer != null)
 				{
-					child.gameObject.GetComponent<Renderer>().sortingLayerName = "Default";
-					child.gameObject.GetComponent<Renderer>().sortingOrder = 0;
+					childRenderer.sortingLayerName = "Default";
+					childRenderer.sortingOrder = 0;
 				}
 			}
 		}
@@ -127,17 +130,19 @@ public class SortLayerMaterialEditor : EditorWindow {
                 #if UNITY_EDITOR
 				if (Selection.activeGameObject != null) {
 					o = Selection.activeGameObject;
-					if (o.GetComponent<Renderer>() != null)
+                    Renderer oRenderer = o.GetComponent<Renderer>();
+                    if (oRenderer != null)
 					{
-						o.GetComponent<Renderer>().sortingOrder = o.GetComponent<Renderer>().sortingOrder+addToLayer;
+						oRenderer.sortingOrder = oRenderer.sortingOrder+addToLayer;
 					}
 					if (includeChildrenForSorting)
 					{
 						Transform[] children = o.GetComponentsInChildren<Transform>(true);
 						foreach(Transform child in children) {
-							if (child.gameObject.GetComponent<Renderer>() != null)
+                            Renderer childRenderer = child.gameObject.GetComponent<Renderer>();
+                            if (childRenderer != null)
 							{
-								child.gameObject.GetComponent<Renderer>().sortingOrder = child.gameObject.GetComponent<Renderer>().sortingOrder+addToLayer;
+								childRenderer.sortingOrder = childRenderer.sortingOrder+addToLayer;
 							}
 						}
 					}
@@ -154,7 +159,8 @@ public class SortLayerMaterialEditor : EditorWindow {
 				#if UNITY_EDITOR
 				if (Selection.activeGameObject != null) {
 					o = Selection.activeGameObject;
-					if (o.GetComponent<Renderer>() != null)
+                    Renderer oRenderer = o.GetComponent<Renderer>();
+                    if (oRenderer != null)
 					{
 						CreateMaterial(o);
 					}
