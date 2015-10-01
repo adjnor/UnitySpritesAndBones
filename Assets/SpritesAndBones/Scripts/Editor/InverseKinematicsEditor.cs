@@ -53,7 +53,7 @@ public class InverseKinematicsEditor : Editor {
         }
     }
 
-    [DrawGizmo(GizmoType.SelectedOrChild | GizmoType.NotSelected)]
+    [DrawGizmo(GizmoType.InSelectionHierarchy | GizmoType.NotInSelectionHierarchy)]
     static void DrawIKGizmo(InverseKinematics ik, GizmoType gizmoType) {
         Handles.Label(ik.transform.position + new Vector3(0.1f, 0), "IK");
     }

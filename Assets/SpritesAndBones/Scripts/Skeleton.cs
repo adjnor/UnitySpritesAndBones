@@ -667,7 +667,7 @@ public class Skeleton : MonoBehaviour {
 				}
 			}
 
-			skin.castShadows = useShadows;
+			skin.shadowCastingMode = (useShadows) ? UnityEngine.Rendering.ShadowCastingMode.On : UnityEngine.Rendering.ShadowCastingMode.Off;
 			skin.receiveShadows = useShadows;
 		}
 
@@ -716,8 +716,8 @@ public class Skeleton : MonoBehaviour {
 				}
 			}
 
-			spriteRenderer.castShadows = useShadows;
-			spriteRenderer.receiveShadows = useShadows;
+			spriteRenderer.shadowCastingMode = (useShadows) ? UnityEngine.Rendering.ShadowCastingMode.On : UnityEngine.Rendering.ShadowCastingMode.Off;
+            spriteRenderer.receiveShadows = useShadows;
 		}
 	}
 

@@ -207,7 +207,7 @@ public class SkeletonEditor : Editor {
 			foreach (Bone bone in bones) {
 				BoxCollider2D coll = bone.gameObject.AddComponent<BoxCollider2D>();
 				coll.size = new Vector2(bone.length / 2, bone.length);
-				coll.center = new Vector2(0, bone.length / 2);
+				coll.offset = new Vector2(0, bone.length / 2);
 				bone.gameObject.AddComponent<Rigidbody2D>();
 				if (bone.transform.parent != null && bone.transform.parent.GetComponent<Bone>() != null) {
 					Bone parentBone = bone.transform.parent.GetComponent<Bone>();

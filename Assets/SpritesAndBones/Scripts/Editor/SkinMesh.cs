@@ -58,7 +58,7 @@ public class SkinMesh : EditorWindow {
     [MenuItem("Sprites And Bones/Create Mesh")]
     protected static void ShowSkinMeshEditor() {
         var wnd = GetWindow<SkinMesh>();
-        wnd.title = "Create Mesh";
+        wnd.titleContent = new GUIContent("Create Mesh");
         wnd.Show();
 
 		SceneView.onSceneGUIDelegate += wnd.OnSceneGUI;

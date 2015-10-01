@@ -519,7 +519,7 @@ public class Bone : MonoBehaviour {
 			//find all SpriteRenderer elements
 			spriteRenderers = transform.GetComponentsInChildren<SpriteRenderer>(true);
 			foreach(SpriteRenderer spriteRenderer in spriteRenderers) {
-				if (skeleton.spriteShadowsShader != null && spriteRenderer.material.shader == skeleton.spriteShadowsShader)
+				if (skeleton.spriteShadowsShader != null && spriteRenderer.sharedMaterial.shader == skeleton.spriteShadowsShader)
 				{
 					renderers[spriteRenderer.transform] = spriteRenderer.transform.position.z;
 				}

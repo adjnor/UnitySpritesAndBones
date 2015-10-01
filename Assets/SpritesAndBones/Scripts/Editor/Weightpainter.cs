@@ -44,7 +44,7 @@ public class Weightpainter : EditorWindow {
     [MenuItem("Sprites And Bones/Weight painting")]
     protected static void ShowWeightpainterWindow() {
         var wnd = GetWindow<Weightpainter>();
-        wnd.title = "Weight painting";
+        wnd.titleContent = new GUIContent("Weight painting");
 
         if (Selection.activeGameObject != null) {
             SkinnedMeshRenderer skin = Selection.activeGameObject.GetComponent<SkinnedMeshRenderer>();
