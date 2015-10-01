@@ -1,4 +1,0 @@
-task pack(type:Exec) {
-    workingDir '.'
-    commandLine unityPath, '-batchmode', '-nographics', '-exportPackage', 'Assets\\SpritesAndBones', 'SpritesAndBones.unitypackage', '-quit'
-}

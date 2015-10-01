@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: abbe19e4f759017478eba31075259a93
+timeCreated: 1443638781
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Head1
+    21300002: Head2
+    21300004: Arm_R
+    21300006: Torso
+    21300008: Arm_L
+    21300010: LowerArm_R
+    21300012: Leg_R
+    21300014: Leg_L
+    21300016: LowerArm_L
+    21300018: Foot_Front_R
+    21300020: Foot_Side_R
+    21300022: Foot_Side_L
+    21300024: Foot_Front_L
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Head1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 910
+        width: 450
+        height: 355
+      alignment: 9
+      pivot: {x: .441398442, y: .262292653}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Head2
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 851
+        width: 425
+        height: 414
+      alignment: 9
+      pivot: {x: .400722235, y: .378975242}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arm_R
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 591
+        width: 121
+        height: 176
+      alignment: 9
+      pivot: {x: .478205651, y: .844616294}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Torso
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 449
+        width: 313
+        height: 327
+      alignment: 9
+      pivot: {x: .601101398, y: .177423313}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arm_L
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 591
+        width: 121
+        height: 176
+      alignment: 9
+      pivot: {x: .5, y: .814649403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LowerArm_R
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 350
+        width: 101
+        height: 224
+      alignment: 9
+      pivot: {x: .473889858, y: .853178322}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Leg_R
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 267
+        width: 121
+        height: 176
+      alignment: 9
+      pivot: {x: .499999762, y: .799666345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Leg_L
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 267
+        width: 121
+        height: 176
+      alignment: 9
+      pivot: {x: .565381289, y: .784683049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LowerArm_L
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 347
+        width: 103
+        height: 224
+      alignment: 9
+      pivot: {x: .602409303, y: .829632878}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Foot_Front_R
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 120
+        height: 209
+      alignment: 9
+      pivot: {x: .499999702, y: .865908444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Foot_Side_R
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 8
+        width: 154
+        height: 201
+      alignment: 9
+      pivot: {x: .585618675, y: .8017537}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Foot_Side_L
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 8
+        width: 153
+        height: 201
+      alignment: 9
+      pivot: {x: .379349858, y: .841112912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Foot_Front_L
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 0
+        width: 120
+        height: 209
+      alignment: 9
+      pivot: {x: .587901831, y: .802820742}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
